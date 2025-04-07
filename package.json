@@ -13,6 +13,7 @@
     "@google/generative-ai": "^0.24.0",
     "react": "^19.0.0",
     "react-chatbot-kit": "^2.2.2",
+    "react-crud-icons": "^1.2.3",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
