@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     // Load saved conversations on component mount
-    const savedConversations = JSON.parse(localStorage.getItem('conversations') || '');
+    const savedConversations = JSON.parse(localStorage.getItem('conversations') || '[]');
     setConversations(savedConversations);
 
     // If there are conversations, set the current one to the most recent
@@ -36,7 +36,7 @@ function App() {
   // Save messages to localStorage
   const saveMessages = (messages) => {
     if (!currentConversationId) return;
-
+     
     const updatedConversations = conversations.map((convo) =>
       convo.id === currentConversationId
         ? { ...convo, messages, lastUpdated: new Date().toISOString() }
@@ -67,7 +67,7 @@ function App() {
       createdAt: new Date().toISOString(),
       lastUpdated: new Date().toISOString(),
     };
-
+    
     const updatedConversations = [...conversations, newConversation];
     setConversations(updatedConversations);
     setCurrentConversationId(newConversation.id); // Key prop in Chatbot will trigger remount

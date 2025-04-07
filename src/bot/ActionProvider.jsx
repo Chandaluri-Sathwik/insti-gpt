@@ -5,14 +5,12 @@ class ActionProvider {
     this.createChatBotMessage = createChatBotMessage;
     this.setState = setStateFunc;
   }
-
-  // Handle the bot's response
   handleGeminiResponse = async (userMessage) => {
     // Set typing indicator
     this.setState((prev) => ({
       ...prev,
       messages: [
-        ...prev.messages,
+        ...prev.messages.filter((msg) => !msg.loading),
         {
           loading: true,
           type: 'bot',

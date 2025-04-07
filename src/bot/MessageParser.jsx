@@ -10,7 +10,7 @@ class MessageParser {
       console.warn("Empty user input detected. Skipping processing.");
       return;
     }
-
+     
     console.log(message)
     this.actionProvider.handleGeminiResponse(message);
   }
