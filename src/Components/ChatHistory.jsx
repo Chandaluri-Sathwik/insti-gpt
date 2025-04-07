@@ -11,7 +11,7 @@ return (
 <div className="chat-history">
 <h3>Previous Conversations</h3>
 <ul>
-{conversations.map((conversation) => (
+{ conversations.map((conversation) => (
 <li
 key={conversation.id}
 className={conversation.id === currentConversationId ? 'active' : ''}
