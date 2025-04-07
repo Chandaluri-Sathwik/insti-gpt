@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     // Load saved conversations on component mount
-    const savedConversations = JSON.parse(localStorage.getItem('conversations') );
+    const savedConversations = JSON.parse(localStorage.getItem('conversations') || '[]');
     setConversations(savedConversations);
 
     // If there are conversations, set the current one to the most recent
