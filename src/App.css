@@ -123,7 +123,7 @@
    0px 4px 6px rgba(0, 0, 0, 0.5); /* Subtle shadows for depth */
    width:60vw;
    position:absolute;
-   bottom:2rem;
+   bottom:3rem;
 }
 
 /* Text input field styling */
@@ -177,10 +177,14 @@
   height: 100%;
   border-right: 1px solid #333;
   overflow-y: auto;
-  margin:0
+  margin:0;
+  scrollbar-width: thin; /* For Firefox: Use a thin scrollbar */
+  scrollbar-color: #555 #1e1e1e;
 }
 
-
+.heading{
+  margin-top:2.5rem;
+}
 .new-chat-button {
   width: 100%;
   padding: 10px 15px;
@@ -242,12 +246,15 @@
 .react-chatbot-kit-chat-message-container::-webkit-scrollbar {
   width: 6px; /* Thin scrollbar width */
 }
-
-.react-chatbot-kit-chat-message-container::-webkit-scrollbar-track {
+.sidebar::-webkit-scrollbar{
+  width:6px;
+}
+.react-chatbot-kit-chat-message-container::-webkit-scrollbar-track,.sidebar::-webkit-scrollbar-track {
   background: #1e1e1e; /* Track background matches container */
 }
 
-.react-chatbot-kit-chat-message-container::-webkit-scrollbar-thumb {
+
+.react-chatbot-kit-chat-message-container::-webkit-scrollbar-thumb ,.sidebar::--webkit-scrollbar-thumb{
   background-color: #555; /* Thumb color */
   border-radius: 9999px; /* Rounded thumb for a modern look */
   border: 2px solid transparent; /* Transparent border for padding effect */
@@ -334,6 +341,7 @@
     top: 5px;
     left: 10px;
     cursor: pointer;
+    margin-bottom: 1rem;
     z-index: 20; /* Ensure it appears above other elements */
   }
 }

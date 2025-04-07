@@ -89,7 +89,8 @@ function App() {
       {/* Sidebar */}
       {isSidebarVisible && (
         <div className="sidebar">
-          <h3>Insti-Gpt</h3>
+          
+          <h3 className='heading'>Insti-Gpt</h3>
           <button onClick={startNewConversation} className="new-chat-button">
             New Conversation
           </button>
